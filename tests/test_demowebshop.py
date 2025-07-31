@@ -1,7 +1,8 @@
 from selene import have, browser
 
 
-def test_should_be_log_in(add_item, setup_browser):
+def test_should_be_log_in(setup_browser):
+    setup_browser.open('https://demowebshop.tricentis.com')
     setup_browser.element('.account').should(have.text('demoqa@test.su'))
 
 
