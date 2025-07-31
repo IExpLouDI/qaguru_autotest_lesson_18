@@ -21,7 +21,7 @@ packages = [{include = "qaguru_autotest_lesson_18", from = "src"}]
 addopts = [
     "-v",                         # Подробный вывод
     "--durations=10",             # Показать медленные тесты
-    "--alluredir=allure-results", # Папка для отчётов Allure
+    "--alluredir=allure-results",
     "--clean-alluredir",          # Очистить папку перед запуском
 ]
 
