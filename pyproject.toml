@@ -10,14 +10,20 @@ requires-python = ">=3.10,<4.0"
 dependencies = [
     "requests (>=2.32.4,<3.0.0)",
     "pytest (>=8.4.1,<9.0.0)",
-    "allure-pytest (>=2.15.0,<3.0.0)"
+    "allure-pytest (>=2.15.0,<3.0.0)",
+    "selene==2.0.0rc9"
 ]
 
 [tool.poetry]
 packages = [{include = "qaguru_autotest_lesson_18", from = "src"}]
 
 [tool.pytest.ini_options]
-addopts = ['--alluredir=allure-results']
+addopts = [
+    "-v",                         # Подробный вывод
+    "--durations=10",             # Показать медленные тесты
+    "--alluredir=allure-results", # Папка для отчётов Allure
+    "--clean-alluredir",          # Очистить папку перед запуском
+]
 
 [tool.allure]
 [build-system]
