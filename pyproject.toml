@@ -11,7 +11,8 @@ dependencies = [
     "requests (>=2.32.4,<3.0.0)",
     "pytest (>=8.4.1,<9.0.0)",
     "allure-pytest (>=2.15.0,<3.0.0)",
-    "selene==2.0.0rc9"
+    "selene==2.0.0rc9",
+    "logging (>=0.4.9.6,<0.5.0.0)"
 ]
 
 [tool.poetry]
@@ -19,8 +20,7 @@ packages = [{include = "qaguru_autotest_lesson_18", from = "src"}]
 
 [tool.pytest.ini_options]
 addopts = [
-    "-v",                         # Подробный вывод
-    "--durations=10",             # Показать медленные тесты
+    "-v",
     "--alluredir=allure-results",
     "--clean-alluredir",          # Очистить папку перед запуском
 ]
